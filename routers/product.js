@@ -1,3 +1,4 @@
+const express = require('express');
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -5,7 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:idproduct', (req, res) => {
-    const id = req.params.idproduct; // ⚠️ pas `oidproduct`
+    const id = req.params.idproduct;
     res.send(`product page with id: ${id}`);
 });
 
