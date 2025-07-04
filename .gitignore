@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Sequelize folders (si utilisés)
+migrations/
+seeders/
+
+# Build/cache folders
+dist/
+.cache/
+.tmp/
+
+# Vim swap files
+*.swp
