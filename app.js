@@ -10,4 +10,14 @@ const userRouter = require('./routers/user')
 app.use('/user', userRouter)
 const productRouter = require('./routers/product')
 app.use('/product', productRouter)
+const sequelize = require('./DB/db')
+async function test(){
+    try{
+    await sequelize.authenticate()
+    console.log('Connection has been established successfully.')}
+    catch (error) {
+        console.error('Unable to connect to the database:', error)
+    }
+}
+test()
 app.listen(3000)
