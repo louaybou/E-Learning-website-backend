@@ -1,14 +1,18 @@
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+
 function userverify(req, res, next) {
-    const token = req.headers['authorization']
+    const authHeader = req.headers['authorization']
+    const token = authHeader && authHeader.split(' ')[1]
     if (!token) {
-        return res.status(401).send('Access denied. No token provided.')
+        return res.status(401).json({ message: 'Accès refusé. Token manquant.' })
     }
     try {
         const verified = jwt.verify(token, process.env.JWT_SECRET)
         req.user = verified
-        next()
+        next();
     } catch (err) {
-        res.status(400).json({ message : 'invalid token'})
-    }}
-    module.exports = userverify
+        res.status(401).json({ message: 'Token invalide' })
+    }
+}
+
+module.exports = userverify;
