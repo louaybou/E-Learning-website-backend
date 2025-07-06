@@ -142,4 +142,3 @@ app.js          # Point d'entrée principal
 ## 👨‍💻 Auteur
 
 Projet backend **Express.js** – Testé avec **Postman**.  
-N'hésite pas à contribuer ou à poser des questions
