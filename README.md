@@ -1,5 +1,11 @@
 # 🚀 Express Web API – Backend Only
 
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="60" height="60"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" width="60" height="60"/>
+</p>
+
 Ce projet est un backend **Node.js** utilisant **Express.js** et **Sequelize** pour gérer des utilisateurs et des produits avec une base de données **MySQL**.  
 🎨 **Aucune interface front-end** : tous les tests se font via **Postman** ou un autre client HTTP.
 
