@@ -25,15 +25,9 @@ Ce projet est un backend **Node.js** utilisant **Express.js** et **Sequelize** p
 ## ⚙️ Installation & Configuration
 
 1. **Cloner le projet**
-   ```bash
-   git clone <repo>
-   cd express web
-   ```
 
 2. **Installer les dépendances**
-   ```bash
-   npm install
-   ```
+   
 
 3. **Configurer la base de données**
    - Crée une base **MySQL**.
@@ -48,9 +42,9 @@ Ce projet est un backend **Node.js** utilisant **Express.js** et **Sequelize** p
      JWT_SECRET=UneCléSecrèteTrèsLongue
      ```
 
-4. **Lancer le serveur**
+4. **Lancer le serveur**(nodemoon script)
    ```bash
-   node app.js
+   npm run dev
    ```
    Les tables seront créées automatiquement si elles n'existent pas.
 
