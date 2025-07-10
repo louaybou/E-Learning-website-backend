@@ -10,10 +10,10 @@ app.get ('/', (req,res) =>{
 })
 const userRouter = require('./routers/user')
 app.use('/user', userRouter)
-const productRouter = require('./routers/product')
-app.use('/product', productRouter)
-const User = require('./models/user')
-const Product = require('./models/product')
+const coursRouter = require('./routers/cours')
+app.use('/cour', coursRouter)
+const panierRouter = require('./routers/panier')
+app.use('/panier' ,panierRouter)
 sequelize.sync({ alter: true })
   .then(() => {
     console.log('Database & tables created!');

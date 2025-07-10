@@ -1,17 +1,15 @@
-const express = require('express')
-express.use(express.json())
 const User = require('../models/user')
 const bycrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
 async function registercontroller(req , res) {
-    const {nom, premon, email, password} = req.body;
+    const {nom, prenom, email, password} = req.body;
     try {
         const hashedPassword =await bycrypt.hash(password, 10)
         const user = await User.create({
             nom,
-            premon,
+            prenom,
             email,
             password: hashedPassword
         })
@@ -34,8 +32,9 @@ async function logincontroller(req, res) {
             if (!ispasswordvalid) {
                 return res.status(401).json({message: 'Invalid password'})
             }
-            res.status(200).json({ message: 'Login successful' });
-            const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' })
+                        const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' })
+
+            res.status(200).json({ message: 'Login successful', token });
         } catch (error) {
             res.status(500).json({message: 'Internal server error' });
         }

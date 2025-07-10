@@ -11,8 +11,15 @@ Ce projet est un backend **Node.js** utilisant **Express.js** et **Sequelize** p
 
 ---
 
-## ✨ Fonctionnalités principales
+$ git pull
+error: Your local changes to the following files would be overwritten by merge:
+  README.md
+<stdin>:18: trailing whitespace.
 
+<stdin>:40: trailing whitespace.
+Projet backend **Express.js** ΓÇô Test├⌐ avec **Postman**.
+warning: 2 lines add whitespace errors.
+Merge with strategy ort failed.
 - 🔐 Authentification des utilisateurs (inscription, connexion)
 - 👤 Gestion des rôles (user, admin)
 - 🛡️ Sécurité avec hashage des mots de passe (**bcrypt**) et **JWT**
