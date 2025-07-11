@@ -1,13 +1,28 @@
 const express = require('express');
 const router = express.Router();
+const coursControlleur = require("../controllers/courscontrolleur");
 
-router.get('/', (req, res) => {
+router.get('/',coursConttrolleur.getcours,(req, res) => {
     res.send('product home page');
 });
+router.route('/add')
+.get((req, res) => {
+    res.send('ajouter un cours')
+})
+.post(coursControlleur.addCours, (req, res) => {
 
-router.get('/:idcours', (req, res) => {
-    const id = req.params.idcours; 
-    res.send(`cours page with id: ${id}`);
+})
+
+
+router.route('/:idcours')
+.get(coursContrtolleur.getcourbyid, (req, res) => {
+    res.send('cours page with id: ' + req.params.idcours);
+})
+.delete((req, res) => {
+    res.send('delete cours with id: ' + req.params.idcours);
+})
+.put((req, res) => {
+    res.send('update cours with id: ' + req.params.idcours);
 });
 
 module.exports = router;
