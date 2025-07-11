@@ -62,19 +62,22 @@ Merge with strategy ort failed.
 ```
 /models         # Modèles Sequelize (User, Product)
   user.js
-  product.js
+  cours.js
 
 /controllers    # Logique métier (UserController)
   userController.js
+  courscontrolleurs.js
 
 /routers        # Définition des routes Express
   user.js
-  product.js
+  cours.js
+  panier.js
 
 /middleware     # Middlewares (auth, validation, rôle)
   userverify.js
   registerverify.js
   role.js
+  courverify.js
 
 /DB             # Connexion Sequelize
   db.js
@@ -117,8 +120,8 @@ app.js          # Point d'entrée principal
   ```
 
 ### 4. 📦 Exemple de route produit
-- **GET** `/product`
-- **GET** `/product/1`
+- **GET** `/cours`
+- **GET** `/cours/1`
 
 ---
 
@@ -139,7 +142,3 @@ app.js          # Point d'entrée principal
 - Ajoute d'autres routes ou modèles selon tes besoins.
 
 ---
-
-## 👨‍💻 Auteur
-
-Projet backend **Express.js** – Testé avec **Postman**.  
