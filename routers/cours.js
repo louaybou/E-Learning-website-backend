@@ -18,10 +18,10 @@ router.route('/:idcours')
 .get(coursContrtolleur.getcourbyid, (req, res) => {
     res.send('cours page with id: ' + req.params.idcours);
 })
-.delete((req, res) => {
+.delete(coursControlleur.deleteCour,(req, res) => {
     res.send('delete cours with id: ' + req.params.idcours);
 })
-.put((req, res) => {
+.put(coursControlleur.updatecour,(req, res) => {
     res.send('update cours with id: ' + req.params.idcours);
 });
 
