@@ -13,7 +13,7 @@ app.use('/user', userRouter)
 const coursRouter = require('./routers/cours')
 app.use('/cour', coursRouter)
 const panierRouter = require('./routers/panier')
-app.use('/panier' ,panierRouter)
+app.use('/panier', panierRouter)
 sequelize.sync({ alter: true })
   .then(() => {
     console.log('Database & tables created!');

@@ -65,4 +65,4 @@ async function updatecour(req, res){
         console.error("Error updating course:", error)
 }}
     
-module.exports = coursController
+module.exports = {addCours, getCours, getcourbyid, deleteCour, updatecour}
